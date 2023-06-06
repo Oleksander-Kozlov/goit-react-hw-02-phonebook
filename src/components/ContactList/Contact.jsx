@@ -1,8 +1,12 @@
-export const Contact = ({ name, number, onDeleteContact, id}) => {
+import { CotactItem, ButtonDelete } from '../ContactList/Contact';
+
+export const Contact = ({ name, number, onDeleteContact, id }) => {
   return (
-    <li>
-      {name}: {number}{' '}
-      <button onClick={() => onDeleteContact(id)}>delete</button>
-    </li>
+    <CotactItem>
+      
+        {name}: {number}{' '}
+        <ButtonDelete onClick={() => onDeleteContact(id)}>Delete</ButtonDelete>
+      
+    </CotactItem>
   );
 };

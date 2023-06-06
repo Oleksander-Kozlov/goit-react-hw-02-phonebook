@@ -1,5 +1,10 @@
 import React, { Component } from "react";
- 
+import {
+  ContactFormStyle,
+  Input,
+  Label,
+  ButtonAddContacts,
+} from '../ContactForm/ContactForm';
     
 
  class ContactForm extends Component {
@@ -30,10 +35,10 @@ import React, { Component } from "react";
   };
   render() {
     return (
-      <form onSubmit={this.handleSabmit}>
-        <label htmlFor="name">
-          Name
-          <input
+      <ContactFormStyle onSubmit={this.handleSabmit}>
+        <div>
+          <Label htmlFor="name">Name</Label>
+          <Input
             type="text"
             name="name"
             pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
@@ -42,10 +47,11 @@ import React, { Component } from "react";
             onChange={this.handleChange}
             value={this.state.name}
           />
-        </label>
-        <label htmlFor="number">
-          Number
-          <input
+        </div>
+
+        <div>
+          <Label htmlFor="number">Number</Label>
+          <Input
             type="tel"
             name="number"
             pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
@@ -54,9 +60,9 @@ import React, { Component } from "react";
             onChange={this.handleChange}
             value={this.state.number}
           />
-        </label>
-        <button type="submit">add contacts</button>
-      </form>
+        </div>
+        <ButtonAddContacts type="submit">add contacts</ButtonAddContacts>
+      </ContactFormStyle>
     );
   }
 };

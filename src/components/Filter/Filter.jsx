@@ -1,10 +1,16 @@
+import {
+  
+  Input,
+  Label,
+  
+} from '../ContactForm/ContactForm';
 export const Filter = ({ value, filter }) => {
   return (
     <div>
-      <label htmlFor="">
+      <Label htmlFor="">
         Find contacts by name
-        <input name="filter" type="text" value={value} onChange={filter}/>
-      </label>
+        <Input name="filter" type="text" value={value} onChange={filter} />
+      </Label>
     </div>
   );
 };
