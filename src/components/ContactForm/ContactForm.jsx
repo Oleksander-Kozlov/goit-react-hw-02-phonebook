@@ -1,6 +1,8 @@
 import React, { Component } from "react";
+ 
+    
 
-export class ContactForm extends Component {
+ class ContactForm extends Component {
     //стейт для данних ім"я та номеру
     state = {
     name: '',
@@ -60,3 +62,4 @@ export class ContactForm extends Component {
 };
 
 
+export default ContactForm;
