@@ -1,33 +1,32 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 import {
   ContactFormStyle,
   Input,
   Label,
   ButtonAddContacts,
 } from '../ContactForm/ContactForm';
-    
 
- class ContactForm extends Component {
-    //стейт для данних ім"я та номеру
-    state = {
+export class ContactForm extends Component {
+  //стейт для данних ім"я та номеру
+  state = {
     name: '',
     number: '',
-    };
-    //Слухач інпутів
+  };
+  //Слухач інпутів
   handleChange = ({ target }) => {
     this.setState({ [target.name]: target.value });
     console.log('target.value', target.value);
-    };
-    //Сабміт форми
-    handleSabmit = (e) => {
+  };
+  //Сабміт форми
+  handleSabmit = e => {
     //    скидую налаштування
-      e.preventDefault();
-      //записую значення з імпуту до об"єкту
+    e.preventDefault();
+    //записую значення з імпуту до об"єкту
     this.props.createContacts({
       name: this.state.name,
       number: this.state.number,
     });
-        // Оновлюю інпут
+    // Оновлюю інпут
     this.setState({
       name: '',
       number: '',
@@ -65,7 +64,6 @@ import {
       </ContactFormStyle>
     );
   }
-};
+}
 
-
-export default ContactForm;
+// export default ContactForm;
