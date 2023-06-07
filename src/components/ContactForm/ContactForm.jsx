@@ -15,7 +15,7 @@ export class ContactForm extends Component {
   //Слухач інпутів
   handleChange = ({ target }) => {
     this.setState({ [target.name]: target.value });
-    console.log('target.value', target.value);
+    
   };
   //Сабміт форми
   handleSabmit = e => {
