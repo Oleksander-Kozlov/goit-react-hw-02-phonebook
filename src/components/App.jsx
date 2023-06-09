@@ -21,10 +21,10 @@ export class App extends Component {
       ({ name }) => name.toLowerCase() === data.name.toLowerCase()
     );
     if (haveNameInPhonebook) {
-      alert(`${data.name} is already in contacts`);
-    } else {
-      this.setState(prevState => ({contacts: [{id:nanoid(),...data}, ...prevState.contacts]}));
+      return alert(`${data.name} is already in contacts`);
     }
+      this.setState(prevState => ({contacts: [{id:nanoid(),...data}, ...prevState.contacts]}));
+    
   };
   //видалення контакту зі списку
   handleDelete = idContact => {

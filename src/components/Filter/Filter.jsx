@@ -3,7 +3,7 @@ import {
   Input,
   Label,
   
-} from '../ContactForm/ContactForm';
+} from '../ContactForm/ContactForm.styled';
 export const Filter = ({ value, filter }) => {
   return (
     <div>

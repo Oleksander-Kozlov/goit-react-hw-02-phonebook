@@ -4,7 +4,7 @@ import {
   Input,
   Label,
   ButtonAddContacts,
-} from '../ContactForm/ContactForm';
+} from '../ContactForm/ContactForm.styled';
 
 export class ContactForm extends Component {
   //стейт для данних ім"я та номеру

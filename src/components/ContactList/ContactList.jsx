@@ -1,5 +1,5 @@
 import { Contact } from './Contact.jsx';
-import { List } from '../ContactList/ContactList.js';
+import { List } from '../ContactList/ContactList.styled.js';
 import PropTypes from 'prop-types';
 export const ContactList = ({ contacts, onDeleteContact }) => {
   return (
