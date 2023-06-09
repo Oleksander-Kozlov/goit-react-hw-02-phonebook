@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import { ContactForm } from './ContactForm/ContactForm.jsx';
 import { Filter } from './Filter/Filter.jsx';
 import { ContactList } from './ContactList/ContactList.jsx';
-import PropTypes from 'prop-types';
+
 
 export class App extends Component {
   state = {
@@ -70,7 +70,4 @@ export class App extends Component {
     );
   }
 }
-Filter.propTypes = {
-  value: PropTypes.string.isRequired,
-  filter: PropTypes.func.isRequired,
-};
+

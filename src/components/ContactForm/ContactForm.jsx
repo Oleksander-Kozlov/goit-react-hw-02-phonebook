@@ -5,6 +5,7 @@ import {
   Label,
   ButtonAddContacts,
 } from '../ContactForm/ContactForm.styled';
+import PropTypes from 'prop-types';
 
 export class ContactForm extends Component {
   //стейт для данних ім"я та номеру
@@ -14,14 +15,13 @@ export class ContactForm extends Component {
   };
   //Слухач інпутів
   handleChange = ({ target }) => {
-    this.setState({ [target.name]: target.value });
-    
+    this.setState({ [target.name]: target.value }); 
   };
   //Сабміт форми
   handleSabmit = e => {
-    //    скидую налаштування
+  // Cкидую налаштування
     e.preventDefault();
-    //записую значення з імпуту до об"єкту
+  // Записую значення з імпуту до об"єкту
     this.props.createContacts({
       name: this.state.name,
       number: this.state.number,
@@ -66,4 +66,7 @@ export class ContactForm extends Component {
   }
 }
 
-// export default ContactForm;
+ContactForm.propTypes = {
+  
+  children: PropTypes.node,
+}

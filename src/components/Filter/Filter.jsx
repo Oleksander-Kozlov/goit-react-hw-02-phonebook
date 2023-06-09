@@ -1,9 +1,6 @@
-import {
-  
-  Input,
-  Label,
-  
-} from '../ContactForm/ContactForm.styled';
+import { Input, Label } from '../ContactForm/ContactForm.styled';
+import PropTypes from 'prop-types';
+
 export const Filter = ({ value, filter }) => {
   return (
     <div>
@@ -13,4 +10,8 @@ export const Filter = ({ value, filter }) => {
       </Label>
     </div>
   );
+};
+Filter.propTypes = {
+  value: PropTypes.string.isRequired,
+  filter: PropTypes.func.isRequired,
 };
